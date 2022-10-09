@@ -1,0 +1,22 @@
+defaults:
+    workspace: ./src/
+    cover: true
+    toc: true
+    build_date: %Y-%m-%d %H:%M:%S %Z
+    encoding: utf-8
+    language: zh-cn
+    directory: output
+    basename: rust-course-release
+    types: pdf
+    paged: true
+    
+    
+builds:
+  - workspace: book
+    basename: book
+  - workspace: booklet
+    basename: booklet
+    cover: false
+    toc: false
+    env:
+        build_msg: Build Message
